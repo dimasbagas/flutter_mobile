@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'SecondPage.dart';
 
 void main(){
   runApp(MyApp());
@@ -20,11 +21,13 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           bodyLarge: TextStyle(fontSize: 18, color: const Color.fromARGB(221, 0, 0, 0)),
           titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
-        )
+        ),
         appBarTheme: AppBarTheme(
           color: Colors.blue,
+          titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
         )
       ),
+      home: Secondpage(),
     );
   }
 }

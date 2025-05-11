@@ -21,6 +21,9 @@ class MyApp extends StatelessWidget {
           bodyLarge: TextStyle(fontSize: 18, color: const Color.fromARGB(221, 0, 0, 0)),
           titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
         )
+        appBarTheme: AppBarTheme(
+          color: Colors.blue,
+        )
       ),
     );
   }

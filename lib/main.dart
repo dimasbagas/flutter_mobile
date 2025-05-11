@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -23,6 +24,16 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Halam Utama"),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text("kehalaman kedua"),
+          onPressed: () {
+            NavigationBar.push(
+              context,MaterialPageRoute(builder: (context => Secondpage()))
+            )
+          },
+        ),
       ),
     );
   }

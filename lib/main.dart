@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'SecondPage.dart';
 
 void main(){
   runApp(MyApp());
@@ -29,9 +30,9 @@ class HomePage extends StatelessWidget {
         child: ElevatedButton(
           child: Text("kehalaman kedua"),
           onPressed: () {
-            NavigationBar.push(
-              context,MaterialPageRoute(builder: (context => Secondpage()))
-            )
+            Navigator.push(
+              context,MaterialPageRoute(builder: (context) => Secondpage()),
+            );
           },
         ),
       ),

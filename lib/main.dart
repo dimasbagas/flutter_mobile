@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'SecondPage.dart';
+import 'second_page.dart';
 
 void main(){
   runApp(MyApp());
@@ -8,16 +8,14 @@ void main(){
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // debugShowCheckedModeBanner: false,
-      title: "Halaman Pertama",
+      debugShowCheckedModeBanner: false,
+      title: "Navigasi FLutter",
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white,
-        fontFamily: 'Roboto',
+        scaffoldBackgroundColor: const Color.fromARGB(255, 181, 191, 3),
         textTheme: TextTheme(
           bodyLarge: TextStyle(fontSize: 18, color: const Color.fromARGB(221, 0, 0, 0)),
           titleLarge: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)
@@ -27,7 +25,42 @@ class MyApp extends StatelessWidget {
           titleTextStyle: TextStyle(fontSize: 20, fontWeight: FontWeight.bold)
         )
       ),
-      home: Secondpage(),
+      home: FirstPage(),
+    );
+  }
+}
+
+class FirstPage extends StatelessWidget {
+  const FirstPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text("halam pertama")),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Selamat datang",
+            style: Theme.of(context).textTheme.titleLarge,
+            ),
+            SizedBox(height: 10),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).primaryColor,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Secondpage()),
+                );
+              },
+              child: Text("Klik disini"),
+            )
+          ],
+        ),
+      ),
     );
   }
 }

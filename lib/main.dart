@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'second_page.dart';
+import 'thri_page.dart';
 
 void main(){
   runApp(MyApp());
@@ -57,7 +58,20 @@ class FirstPage extends StatelessWidget {
                 );
               },
               child: Text("Kehalaman kedua"),
-            )
+            ),
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Theme.of(context).primaryColor,
+                foregroundColor: Colors.white,
+              ),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => ThriPage()),
+                );
+              },
+              child: Text("Kehalaman Ketiga"),
+            ),
           ],
         ),
       ),

@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'thri_page.dart';
+import 'package:flutter_mobile/second_page.dart';
 
-class Secondpage extends StatelessWidget {
-  const Secondpage({super.key});
+class ThriPage extends StatelessWidget {
+  const ThriPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Halaman kedua")),
+      appBar: AppBar(title: Text("Halaman Ketiga")),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -35,10 +35,10 @@ class Secondpage extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => ThriPage()),
+                  MaterialPageRoute(builder: (context) => Secondpage()),
                 );
               },
-              child: Text("Kehalaman Ketiga"),
+              child: Text("Kehalaman Kedua"),
             ),
           ],
         ),

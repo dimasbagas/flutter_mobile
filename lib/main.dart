@@ -56,7 +56,7 @@ class FirstPage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => Secondpage()),
                 );
               },
-              child: Text("Klik disini"),
+              child: Text("Kehalaman kedua"),
             )
           ],
         ),

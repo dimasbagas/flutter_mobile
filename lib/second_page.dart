@@ -24,7 +24,7 @@ class Secondpage extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: Text("klik disini"),
+              child: Text("Kehalaman pertama"),
             ),
           ],
         ),
